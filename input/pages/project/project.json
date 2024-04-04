@@ -1,0 +1,5 @@
+{
+   "layout": "slim_banner.njk",
+   "tags": "project",
+   "back": "/projects"
+}

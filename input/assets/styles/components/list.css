@@ -1,0 +1,33 @@
+.list {
+  position: relative;
+  width: 1160px;
+  height: fit-content;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+.list__container {
+  padding: 0;
+  width: fit-content;
+}
+
+.list__item {
+  display: flex;
+  height: 81px;
+  width: 1160px;
+  padding: 32px 0px;
+  border-bottom: 2px solid hsla(0, 0%, 10%, 1);
+  justify-content: space-between;
+  padding: 0;
+}
+
+.list__item__left {
+  display: flex;
+  gap: 80px;
+}
+
+.list .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

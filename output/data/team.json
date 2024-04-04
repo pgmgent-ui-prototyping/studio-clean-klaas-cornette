@@ -1,0 +1,50 @@
+[{
+    "data" : {
+        "title": "John Doe",
+        "subtitle": "Founder and CEO",       
+        "image": "../img/team1.png",
+        "nav": {
+            "order": 1
+        }
+    }
+},
+{
+    "data" : {
+        "title": "Mac Johnson",
+        "subtitle": "Prototyper",       
+        "image": "../img/team2.png",
+        "nav": {
+            "order": 2
+        }
+    }
+},
+{
+    "data" : {
+        "title": "Francis McDonald",
+        "subtitle": "Product Designer",       
+        "image": "../img/team3.png",
+        "nav": {
+            "order": 3
+        }
+    }
+},
+{
+    "data" : {
+        "title": "Jane Smith",
+        "subtitle": "Front-end developer",       
+        "image": "../img/team4.png",
+        "nav": {
+            "order": 4
+        }
+    }
+},{
+    "data" : {
+        "title": "Mark Cuban",
+        "subtitle": "Back-end developer",       
+        "image": "../img/team5.png",
+        "nav": {
+            "order": 5
+        }
+    }
+}
+]

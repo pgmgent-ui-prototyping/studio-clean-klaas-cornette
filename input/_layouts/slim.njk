@@ -1,0 +1,20 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+
+    {% include "../_partials/header.njk" %}
+
+    {% block top %}
+        
+    {% endblock top %}
+
+    <div class="slim">
+
+        {% block slim %}
+
+            {{ content | safe }}
+
+        {% endblock slim %}
+
+    </div>
+{% endblock main %}

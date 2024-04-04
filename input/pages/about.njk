@@ -1,0 +1,28 @@
+---
+title: 'We are a creative agency with talented people.'
+button:
+    text: 'Contact us'
+    link: '/contact'
+nav: 
+    title: About
+    order: 3
+tags: nav
+---
+
+{% extends "../_layouts/layer.njk" %}
+{% import "../_partials/components.njk" as components with context %}
+
+{% block top %}
+    {{ components.hero(images=['../img/hero_about1.png', '../img/hero_about2.png', '../img/hero_about3.png', '../img/hero_about4.png']) }}
+{% endblock top %}
+{% block middle %}
+
+    {{components.highlightCard(
+        items=team,
+        title="Meet the team",
+        length=1000
+        )  
+    }} 
+    
+{% endblock middle %}
+

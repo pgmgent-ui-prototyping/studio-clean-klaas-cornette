@@ -1,0 +1,99 @@
+---
+title: We’re Clean, but we get our hands dirty.
+nav:
+  title: Home
+  order: 0
+tags: nav
+button:
+  text: Our projects
+  link: /projects
+---
+
+{% extends "../_layouts/layer.njk" %}
+{% import "../_partials/components.njk" as components with context %}
+
+{% block top %}
+    {{ components.hero(images=["/img/hero1.png","/img/hero2.png"]) }}
+{% endblock top %}
+
+{% block middle %}
+
+    {{components.list(
+    items=collections.project, 
+    title="Our projects", 
+    link="/projects", 
+    text="See all our work"
+    ) 
+}}
+
+{% endblock middle %}
+
+{% block bottom %}
+
+    {{components.highlightCard(
+    items=collections.blog,
+    title="Read our latest news", 
+    link="/blog", 
+    text="Read our blog",
+    length=3
+    )
+}}
+
+{% endblock bottom %}
+
+{#
+
+{% for item in collections.blogs | slicefilter(1) %}{
+    "title": "{{ item.title }}",
+    "subtitle": "{{ item.subtitle }}",
+    "image": "{{ item.data.image }}",
+    "link": "{{ item.data.url }}"
+}{% endfor %}
+
+
+
+
+
+
+
+
+{{components.list(cards=[{        
+    "title": "Why 11ty rocks!",
+    "subtitle": "Eleventy is our favourite Static Site Generator, we'll tell you why.",       
+    "image": "img/home_grid_1.png",         
+    "link": "/blog/eleventy"    
+},{        
+    "title": "Notepads are cool",        
+    "subtitle": "We skipped Notion and other apps, we're going back to basics.",        
+    "image": "img/home_grid_2.png",        
+    "link": "/blog/eleventy"    
+},{        
+    "title": "You designed with us",        
+    "subtitle": "We held a User Experience workshop, and it was amazing.",        
+    "image": "img/home_grid_3.png",        
+    "link": "/blog/design"    
+}], title="Read our latest news", link="/blog", text="Read our blog") }}
+
+{% endfor %}
+
+{% endblock bottom %} 
+
+
+{#
+{{components.list(cards=[{        
+    "title": "Why 11ty rocks!",
+    "subtitle": "Eleventy is our favourite Static Site Generator, we'll tell you why.",       
+    "image": "img/home_grid_1.png",         
+    "link": "/blog/eleventy"    
+},{        
+    "title": "Notepads are cool",        
+    "subtitle": "We skipped Notion and other apps, we're going back to basics.",        
+    "image": "img/home_grid_2.png",        
+    "link": "/blog/eleventy"    
+},{        
+    "title": "You designed with us",        
+    "subtitle": "We held a User Experience workshop, and it was amazing.",        
+    "image": "img/home_grid_3.png",        
+    "link": "/blog/design"    
+}], title="Read our latest news", link="/blog", text="Read our blog") }}    
+#}

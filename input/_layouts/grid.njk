@@ -1,0 +1,17 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+
+{% include "../_partials/header.njk" %}
+
+<div class="layout__grid">
+      {% block grid %}
+            {{ content }}
+      {% endblock grid %}  
+</div>
+<div class="spacing"></div>
+{% endblock main %}  
+
+     
+
+

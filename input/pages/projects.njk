@@ -1,0 +1,21 @@
+---
+title: 'We make digital experiences.'
+nav: 
+    title: Projecten
+    order: 2
+tags: nav
+---
+
+{% extends "../_layouts/grid.njk" %}
+
+{% import "../_partials/components.njk" as components %}
+
+{% block grid %}
+    
+{{ components.card(
+    items=collections.project
+    )
+}}
+
+{% endblock grid %}
+

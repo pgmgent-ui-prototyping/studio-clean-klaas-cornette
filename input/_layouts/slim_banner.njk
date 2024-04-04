@@ -1,0 +1,11 @@
+{% extends "./slim.njk" %}
+
+{% block top %}
+    {% if banner %}
+        <div class="banner">
+            {% block slimbanner %}
+                <img src="{{banner}}" alt="banner">
+            {% endblock slimbanner %}
+        </div>
+    {% endif %}
+{% endblock top %}

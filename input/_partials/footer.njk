@@ -1,0 +1,21 @@
+<footer class="navbar">
+  <a class="text" href="{{ '/' | url }}">Clean</a>
+  <ul class="menu menu--unstyled">
+    {% for nav_item in collections.nav | sorting %}
+    <li class="menu__item">
+      <a class="text" href="{{ nav_item.page.url }}">
+        {{ nav_item.data.nav.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <ul class="menu menu--unstyled">
+    {% for nav in collections.extra_nav %}
+    <li class="menu__item">
+      <a class="text" href="{{ nav.page.url }}">
+        {{ nav.data.nav }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</footer>

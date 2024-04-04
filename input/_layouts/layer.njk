@@ -1,0 +1,26 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+
+    {% include "../_partials/header.njk" %}
+
+    <section class="spacing">
+        {% block top %}
+            {{ content }}
+        {% endblock top %}
+    </section>
+
+    <section class="spacing">
+        {% block middle %}
+            {{ content}}
+        {% endblock middle %}
+    </section>
+
+    <section class="spacing">
+        {% block bottom %}
+            {{ content}}
+        {% endblock bottom %}
+    </section>
+{% endblock main %}
+
+```

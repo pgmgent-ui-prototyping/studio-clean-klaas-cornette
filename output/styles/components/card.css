@@ -1,0 +1,45 @@
+.highlightcard {
+  position: relative;
+  height: fit-content;
+  width: 1160px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+.card {
+  position: relative;
+  width: 346px;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card__image {
+  width: 346px;
+  height: 278px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 276px;
+  border-radius: 20px;
+  background-color: hsla(51, 16%, 91%, 0.5);
+}
+
+.arrow svg {
+  position: absolute;
+  top:18px;
+  left: 18px
+}
+
+.highlightcard .button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,12 @@
+.hero {
+  display: flex;
+  gap: 80px;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.hero__image {
+  width: 540px;
+  height: 385px;
+  border-radius: 20px;
+}

@@ -1,0 +1,147 @@
+{% macro card(items) %}
+  {% for item in items %}
+    <div class="card">
+      <a class="card__container" href="{{ item.data.link }}">
+        <img src="{{item.data.image}}" alt="{{ item.data.title }}" class="card__image"/>
+        <div class="arrow">
+          <svg
+        width="25"
+        height="24"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+            <path
+          d="M24.5607 13.0607C25.1464 12.4749 25.1464 11.5251 24.5607 10.9393L15.0147 1.3934C14.4289 0.807611 13.4792 0.807611 12.8934 1.3934C12.3076 1.97919 12.3076 2.92893 12.8934 3.51472L21.3787 12L12.8934 20.4853C12.3076 21.0711 12.3076 22.0208 12.8934 22.6066C13.4792 23.1924 14.4289 23.1924 15.0147 22.6066L24.5607 13.0607ZM0.5 13.5H23.5V10.5H0.5V13.5Z"
+          fill="#191919"
+/>
+          </svg>
+        </div>
+      </a>
+      <h1 class="text text--large">
+        {{ item.data.title }}
+      </h1>
+      <p class="text">
+        {{ item.data.subtitle }}
+      </p>
+    </div>
+  {% endfor %}
+  <link rel="stylesheet" href="/styles/components/card.css"/>
+{% endmacro %}
+
+{% macro button(text, link) %}
+  <a href="{{ link }}" class="button text text--large text--white text--unstyled">
+    {{ text }}
+  </a>
+  <link rel="stylesheet" href="/styles/components/button.css"/>
+{% endmacro %}
+
+{% macro hero (images)%}
+  <div class="herogrid">
+    {% for image in images %}
+
+      <img src="{{ image }}" alt="Hero Image" class="hero__image"/>
+    {% endfor %}
+  </div>
+  <link rel="stylesheet" href="/styles/components/hero.css"/>
+{% endmacro %}
+
+{% macro highlightCard(items, title, link, text, length) %}
+  <div class="highlightcard">
+    <h1 class="title title--small">
+      {{ title }}
+    </h1>
+    <div class="row">
+      {% for card in items | sorting | sliceFilter(length) %}
+        <div class="card">
+          <a class="card__container" href="{{ card.data.link }}">
+            <img
+          src="{{ card.data.image }}"
+          alt="{{ card.data.title }}"
+          class="card__image"
+/>
+            <div class="arrow">
+              <svg
+            width="25"
+            height="24"
+            viewBox="0 0 25 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+                <path
+              d="M24.5607 13.0607C25.1464 12.4749 25.1464 11.5251 24.5607 10.9393L15.0147 1.3934C14.4289 0.807611 13.4792 0.807611 12.8934 1.3934C12.3076 1.97919 12.3076 2.92893 12.8934 3.51472L21.3787 12L12.8934 20.4853C12.3076 21.0711 12.3076 22.0208 12.8934 22.6066C13.4792 23.1924 14.4289 23.1924 15.0147 22.6066L24.5607 13.0607ZM0.5 13.5H23.5V10.5H0.5V13.5Z"
+              fill="#191919"
+/>
+              </svg>
+            </div>
+          </a>
+          <h1 class="text text--large">
+            {{ card.data.title }}
+          </h1>
+          <p class="text">
+            {{ card.data.subtitle }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+    {% if text %}
+      <a
+    href="{{ link }}"
+    class="button text text--large text--white text--unstyled"
+  >
+        {{ text }}
+      </a>
+    {% endif %}
+  </div>
+  <link rel="stylesheet" href="/styles/components/button.css"/>
+  <link rel="stylesheet" href="/styles/components/card.css"/>
+{% endmacro %}
+
+{% macro list(items, title, link, text) %}
+  <div class="list">
+    {% if title %}
+      <h1 class="title title--small">
+        {{ title }}
+      </h1>
+    {% endif %}
+    <div class="list">
+      <ul class="list__container">
+        {% for item in items | sliceFilter(3) %}
+          <a href="{{item.data.link}}">
+            <li class="list__item">
+              <div class="list__item__left">
+                {% if item.data.start %}
+                  <p class="text text--large">
+                    {{ item.data.start }}
+                  </p>
+                {% endif %}
+                <p class="text text--large">
+                  {{ item.data.title }}
+                </p>
+              </div>
+              <p class="text text--large">
+                {{ item.data.subtitle }}
+              </p>
+
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+    <a
+    href="{{ link }}"
+    class="button text text--large text--white text--unstyled"
+  >
+      {{ text }}
+    </a>
+  </div>
+  <link rel="stylesheet" href="/styles/components/button.css"/>
+  <link rel="stylesheet" href="/styles/components/list.css"/>
+{% endmacro %}
+
+{% macro banner(image) %}
+  <div class="banner">
+    <img src="{{ image }}" alt="Banner Image" class="banner__image"/>
+  </div>
+  <link rel="stylesheet" href="/styles/components/banner.css"/>
+{% endmacro %}

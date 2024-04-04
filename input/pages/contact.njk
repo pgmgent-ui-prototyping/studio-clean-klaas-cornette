@@ -1,0 +1,18 @@
+---
+title: "Get in touch, we’ll get back to you."
+nav:
+  title: Contact
+  order: 4
+tags: nav
+---
+
+{% extends "../_layouts/layer.njk" %}
+ {% import "../_partials/components.njk" as components with context %} 
+
+{% block top %}
+{{components.list(items=info, link="", text="Send us an email") }}
+{% endblock top %} 
+
+{% block middle %}
+    {{components.banner(image="../img/banner_contact.png")}}
+{% endblock middle %} ```

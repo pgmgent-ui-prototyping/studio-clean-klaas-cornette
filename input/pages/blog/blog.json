@@ -1,0 +1,5 @@
+{
+   "layout": "slim.njk",
+   "tags": "blog",
+   "back": "/blog"
+}
